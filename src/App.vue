@@ -17,13 +17,20 @@
 </script>
 
 <template>
-  <Comp_Header/>
-  <Comp_Main/>
-  <Comp_Footer/>
+  <div id="web_page" class="container-fluid">
+    <Comp_Header/>
+    <Comp_Main/>
+    <Comp_Footer/>
+  </div>
 </template>
 
 <style scoped lang="scss">
     // Uso del foglio di stile scss
     @use "./assets/style/main.scss" as *;
+
+    #web_page
+    {
+      background-color: $web_page_bg_color;
+    }
 
 </style>
