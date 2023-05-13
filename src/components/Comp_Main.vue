@@ -109,7 +109,7 @@
                 v-for="(item, index) in cards_array"
                 :key="index"
                 :class="set_card_classes(index)">
-                    <!-- <Comp_Single_Card :current_card = "item" :index = "index" /> -->
+                    <Comp_Single_Card :current_card = "item" :index = "index" />
                 </div>
             </div>
         </section>
@@ -138,13 +138,7 @@
             {
                 padding: $card_set_padding;
                 width: $card_set_width;
-                // max-width: calc($card_set_width + $card_set_gap);
                 height: $card_set_height;
-                // max-height: calc($card_set_height + $card_set_gap);
-                // display: flex;
-                // flex-flow: column wrap;
-                // justify-content: start;
-                // align-items: start;
                 display: grid;
                 gap: $card_set_gap;
                 grid-template-areas: 
@@ -152,63 +146,35 @@
                     "second third fifth"
                     "second third sixth"
                     "fourth fourth sixth";
-                border: 3px solid yellow;
                 margin: 0 auto;
-                .card
-                {
-                    // width: $card_long_side;
-                    // height: $card_short_side;
-                    // flex-grow: 1;
-                    // border: 3px solid green;
-                    // &.vertical
-                    // {
-                    //     width: $card_short_side;
-                    //     height: $card_long_side;
-                    //     border: 3px solid white;
-                    // }
-                    // &.inner_flex
-                    // {
-                    //     width: $card_short_side;
-                    //     height: $card_long_side;
-                    //     border: 3px solid blueviolet;
-                    // }
-                }
                 .card:nth-child(1)
                 {
                     grid-area: first;
-                    border: 3px solid white;
                 }
                 .card:nth-child(2)
                 {
                     grid-area: second;
-                    border: 3px solid yellow;
 
                 }
                 .card:nth-child(3)
                 {
                     grid-area: third;
-                    border: 3px solid yellow;
 
                 }
                 .card:nth-child(4)
                 {
                     grid-area: fourth;
-                    border: 3px solid white;
 
                 }
                 .card:nth-child(5)
                 {
                     grid-area: fifth;
-                    border: 3px solid blue;
 
                 }
                 .card:nth-child(6)
                 {
                     grid-area: sixth;
-                    border: 3px solid blue;
-
                 }
-
             } 
         }
     }
