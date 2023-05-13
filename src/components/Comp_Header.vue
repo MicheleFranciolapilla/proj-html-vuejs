@@ -46,7 +46,7 @@
             width: 100%;
             height: $header_height_basic;
             padding: 0 $header_x_padding;
-            border: 3px solid yellow;
+            transition: all 0.33s;
             &.scrolled
             {
                 height: $header_height_scrolled;
@@ -59,7 +59,6 @@
                 {
                     height: 80%;
                     object-fit: contain;
-                    border: 3px solid white;
                 } 
             } 
             nav
