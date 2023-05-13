@@ -17,20 +17,40 @@
 </script>
 
 <template>
-  <div id="web_page" class="container-fluid">
-    <Comp_Header/>
-    <Comp_Main/>
-    <Comp_Footer/>
+  <div id="web_page">
+    <!-- Nel contenitore "underlay" prende posto la foto principale. Si è preferito il tag "img" alla modalità "background-image" unicamente per non avere un "div" vuoto -->
+    <!-- "Underlay" è posizionato "fixed" per consentire a tutto il layout di scorrergli sopra -->
+    <div id="underlay">
+      <img src="img/home_slider.jpg" alt="Foto principale">
+    </div>
+    <!-- Nel contenitore "overlay" giacciono tutti i componenti della pagina -->
+    <div id="overlay">
+      <Comp_Header/>
+      <Comp_Main/>
+      <Comp_Footer/>
+    </div>
   </div>
 </template>
 
 <style scoped lang="scss">
-    // Uso del foglio di stile scss
-    @use "./assets/style/main.scss" as *;
+  // Uso del foglio di stile scss
+  @use "./assets/style/main.scss" as *;
 
     #web_page
     {
-      background-color: $web_page_bg_color;
+      #underlay
+      {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100vh;
+        img
+        {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        } 
+      }
     }
-
 </style>
