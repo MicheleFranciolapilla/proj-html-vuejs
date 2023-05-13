@@ -1,7 +1,14 @@
 <script>
+    import { store } from "../store";
     export default
     {
         name    : "Comp_Header",
+        data()
+        {
+            return {
+                store
+            }
+        },
         methods :
         {
             nav_menu()
@@ -13,7 +20,8 @@
 <template>
     <!-- Nello "header" prendono posto il logo e la "nav" (dentro cui è posizionato il menù) -->
     <!-- Il posizionamento "sticky" di "header", unitamente al suo "z-index" permette la sua staticità durante lo scroll ed il suo essere sul livello z più elevato (tutti gli altri componenti gli scorrono al di sotto) -->
-    <header class="std_flex">
+    <!-- Allo scroll, dimensione e background di "header" commutano, se è il caso -->
+    <header class="std_flex" :class="(store.is_scrolled) ? ('scrolled') : ('')">
         <a href="/" class="std_flex">
             <img src="img/avada-music-logo-retina.png" alt="Logo grande">
         </a>
@@ -39,6 +47,11 @@
             height: $header_height_basic;
             padding: 0 $header_x_padding;
             border: 3px solid yellow;
+            &.scrolled
+            {
+                height: $header_height_scrolled;
+                background-color: $header_bg_color;
+            }
             a
             {
                 height: 100%;
