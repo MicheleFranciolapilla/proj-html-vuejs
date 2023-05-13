@@ -1,7 +1,6 @@
 <script>
     import Comp_Menu from './Comp_Menu.vue';
     import Comp_Banner from './Comp_Banner.vue';
-    import Comp_Card_Box from "./Comp_Card_Box.vue";
     export default
     {
         name        : "Comp_Main",
@@ -9,7 +8,6 @@
         {   
             Comp_Menu,
             Comp_Banner,
-            Comp_Card_Box  
         },
         data()
         {
@@ -33,7 +31,39 @@
                                         title           : "Live Dates",
                                         text            : "Ac felis donec et odio pellentesque diam volutpat commodo. Et sollicitudin ac orci phasellus egestas tellus. Ac turpis egestas maecenas pharetra convallis posuere morbi. " 
                                     }
-                                ] 
+                                ],
+                cards_array     : [
+                                    {
+                                        image   : "img/blog_music_techo-1200x600.jpg", 
+                                        title   : "Technology and music",
+                                        text    : "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."     
+                                    },
+                                    {
+                                        image   : "img\blog-post3-600x900.jpg", 
+                                        title   : "While my guitar gently weeps",
+                                        text    : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."     
+                                    },
+                                    {
+                                        image   : "img\blog-post4-600x900.jpg", 
+                                        title   : "It just sounds better",
+                                        text    : "Aliquet risus feugiat in ante metus dictum at. Laoreet non curabitur gravida arcu ac. Lectus proin nibh nisl condimentum."     
+                                    },
+                                    {
+                                        image   : "img\blog_flavor_rock-1200x600.jpg",
+                                        title   : "The flavor of rock",
+                                        text    : "Nunc aliquet bibendum enim facilisis. Habitant morbi tristique senectus et netus et malesuada."     
+                                    },
+                                    {
+                                        image   : "img\blog-post1-600x900.jpg", 
+                                        title   : "Taking it back to the old school",
+                                        text    : "Tellus molestie nunc non blandit massa enim nec. Aliquam faucibus purus in massa tempor nec feugiat. Vulputate enim nulla aliquet porttitor lacus. "     
+                                    },
+                                    {
+                                        image   : "img\blog-post2-600x900.jpg", 
+                                        title   : "Sharing the stage with a legend",
+                                        text    : " Mauris sit amet massa vitae tortor condimentum lacinia. Phasellus faucibus scelerisque eleifend donec pretium vulputate sapien nec sagittis."     
+                                    }
+                                ]
             }
         }
     }
@@ -49,7 +79,12 @@
             </div>
         </section>
         <Comp_Banner :banner_data = "banner_array[0]" />
-        <Comp_Card_Box/>
+        <section id="card_set_section">
+            <Comp_Banner :banner_data = "banner_array[1]" />
+            <div id="card_set">
+
+            </div>
+        </section>
     </main>
 </template>
 
@@ -67,6 +102,14 @@
             {
                 color: white;
             }
+        }
+        #card_set_section
+        {
+            background-color: $main_bg_color;
+            #card_set
+            {
+                padding: $card_set_padding;
+            } 
         }
     }
 
