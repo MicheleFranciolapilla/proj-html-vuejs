@@ -3,18 +3,28 @@
     {
         name        : "Comp_Banner",
         props       : ['banner_data'],
+        methods     :
+        {
+            banner_clicked()
+            {
+                if (this.banner_data.clickable) this.$emit("link_clicked", this.banner_data.id);
+            }
+        }
     }
 </script>
 
 <template>
     <div class="banner std_flex flex-column" 
-    :style="(banner_data.bg_color != '') ? (`background-color:${banner_data.bg_color}`) : ('')">
+    :style="(banner_data.bg_color != '') ? (`background-color:${banner_data.bg_color}`) : ('')"
+    :class="(banner_data.clickable) ? ('clickable') : ('')"
+    v-on:click="banner_clicked()">
         <div class="bar"
         :style="(banner_data.bar_color != '') ? (`background-color:${banner_data.bar_color}`) : ('')">
         </div>
         <div class="banner_box std_flex flex-column justify-content-center">
-            <h2>{{ banner_data.title }}</h2>
-            <div class="line"></div>
+            <h2 v-if="!(banner_data.clickable)">{{ banner_data.title }}</h2>
+            <span v-else>{{ banner_data.title }}</span>
+            <div v-if="banner_data.line_bool" class="line"></div>
             <div>
                 <p>{{ banner_data.text }}</p>
             </div>
@@ -28,6 +38,29 @@
 
     .banner
         {
+            &.clickable
+            {
+                span
+                {
+                    font-size: 1.5rem;
+                    font-weight: 800;
+                    color: white;
+                } 
+                .banner_box
+                {
+                    gap: 0;
+                    padding: 2.5rem;
+                }
+                &:hover
+                {
+                   cursor: pointer; 
+                   background-color: rgb(213, 196, 196) !important;
+                   span
+                   {
+                    color: black !important;
+                   } 
+                }
+            }
             .bar
             {
                 width: $bar_width;
