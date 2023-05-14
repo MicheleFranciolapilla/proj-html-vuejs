@@ -3,42 +3,18 @@
     {
         name        : "Comp_Single_Card",
         props       : ['current_card', 'index'],
-        methods     :
-        {
-            img_overlay_on()
-            {
-                let img_list = document.querySelectorAll(".img_overlay");
-                if (!(img_list[this.index].classList.contains("img_overlay_full")))
-                {
-                    img_list[this.index].classList.add("img_overlay_full");
-                    console.log("mouse in");
-                }
-            },
-
-            img_overlay_off()
-            {
-                let img_list = document.querySelectorAll(".img_overlay");
-                if (img_list[this.index].classList.contains("img_overlay_full"))
-                {
-                    img_list[this.index].classList.remove("img_overlay_full");
-                    console.log("mouse out");
-                }
-            }
-        }
     }
 </script>
 
 <template>
-    <div class="single_card position-relative" 
-    v-on:mouseover="img_overlay_on()" 
-    v-on:mouseleave="img_overlay_off()">
+    <div class="single_card position-relative">
         <img :src="current_card.image" alt="index">
         <div class="img_data">
             <h5>{{ current_card.title }}</h5>
             <p>{{ current_card.text }}</p>
         </div>
         <div class="img_overlay">
-            <h5>{{ current_card.title }}</h5>
+            <h5 class="title_on_overlay">{{ current_card.title }}</h5>
         </div>
     </div>
 </template>
@@ -65,7 +41,9 @@
                 width: 100%;
                 padding: 1.5rem 1rem;
                 text-align: center;
+                overflow: hidden;
                 background-color: $img_data_bg;
+                transition: all $img_transition_time;
                 h5
                 {
                     color: $img_title_color;
@@ -79,26 +57,33 @@
             {
                 position: absolute;
                 left: 0;
-                bottom: 0;
+                right:0;
                 top: 0;
-                width: 0;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                background-color: $img_overlay_color;
-                color: white;
-                transition: width 0.25s;
-            }
-            .img_overlay_full
-            {
                 width: 100%;
+                height: 0;
+                overflow: hidden;
+                background-color: $img_overlay_color;
+                transition: all $img_transition_time;
+                .title_on_overlay
+                {
+                    color: white;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    -webkit-transform: translate(-50%, -50%);
+                    -ms-transform: translate(-50%, -50%);
+                    transform: translate(-50%, -50%);
+                    text-align: center;
+                }
+            }
+            &:hover .img_overlay
+            {
+                height: 100%;
+            }
+            &:hover .img_data
+            {
+                height: 0;
+                padding: 0;
             }
         }
-
-        @keyframes overlay_sliding 
-        {
-            from    {width: 0;}   
-            to      {width: 100%;} 
-        }
-
 </style>

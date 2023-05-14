@@ -26,4 +26,6 @@ $img_data_bg                : #323844;
 $img_title_color            : #EC4858;
 $img_text_color             : #7D7173;
 $img_overlay_color          : rgba($color: #FF0000, $alpha: 0.5);
+// La variabile $img_transition_time ha un corrispettivo nei data(){return{}} del componente "Comp_Single_Card". Mantenere l'allineamento tra le due variabili
+$img_transition_time        : 0.33s;
 
