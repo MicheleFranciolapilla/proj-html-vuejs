@@ -134,9 +134,9 @@
         #card_set_section
         {
             background-color: $main_bg_color;
+            padding: 0 $card_set_padding calc(2 * $card_set_padding);
             #card_set
             {
-                padding: $card_set_padding;
                 width: $card_set_width;
                 height: $card_set_height;
                 display: grid;
@@ -154,22 +154,18 @@
                 .card:nth-child(2)
                 {
                     grid-area: second;
-
                 }
                 .card:nth-child(3)
                 {
                     grid-area: third;
-
                 }
                 .card:nth-child(4)
                 {
                     grid-area: fourth;
-
                 }
                 .card:nth-child(5)
                 {
                     grid-area: fifth;
-
                 }
                 .card:nth-child(6)
                 {
