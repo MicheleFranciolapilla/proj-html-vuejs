@@ -50,6 +50,15 @@
                                         title           : "Live Dates",
                                         text            : "Ac felis donec et odio pellentesque diam volutpat commodo. Et sollicitudin ac orci phasellus egestas tellus. Ac turpis egestas maecenas pharetra convallis posuere morbi.",
                                         clickable       : false 
+                                    },
+                                    {
+                                        id              : 4, 
+                                        bg_color        : "#EC4858",
+                                        bar_color       : "",
+                                        line_bool       : false, 
+                                        title           : "VIEW ALL LIVE DATES",
+                                        text            : "" ,
+                                        clickable       : true 
                                     }
                                 ],
                 cards_array     : [
@@ -138,6 +147,12 @@
             </div>
         </section>
         <Comp_Banner :banner_data = "banner_array[2]" @link_clicked = "manage_click" />
+        <section id="poster_section">
+        </section>
+        <section id="live_date_section">
+            <Comp_Banner :banner_data = "banner_array[3]" />
+        </section>
+        <Comp_Banner :banner_data = "banner_array[4]" @link_clicked = "manage_click" />
     </main>
 </template>
 
@@ -197,6 +212,18 @@
                     grid-area: sixth;
                 }
             } 
+        }
+        #poster_section
+        {
+            height: 100vh;
+            background-image: url(img/home-testimonial-parallax.jpg);
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+        }
+        #live_date_section
+        {
+            background-color: $main_bg_color;
         }
     }
 
