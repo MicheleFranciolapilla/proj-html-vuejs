@@ -1,11 +1,29 @@
 <script>
     import { store } from "../store";
+    import Comp_Menu_Manager from "./Comp_Menu_Manager.vue";
     export default
     {
-    name: "Comp_Header",
+    name        : "Comp_Header",
+    components  :
+    {
+        Comp_Menu_Manager
+    },
     data() {
         return {
             store,
+            nav_icon    :
+                            {
+                                menu_class          : 0,
+                                is_horizontal       : true,
+                                category            : 0,
+                                menu_items          :
+                                                        [
+                                                            {
+                                                                text        : 'fa-solid fa-bars',
+                                                                is_active   : true
+                                                            }
+                                                        ]
+                            }
         };
     },
 }
@@ -21,9 +39,14 @@
         </a>
         <!-- Nella "nav" è allocato il menù, che, nelle varie fasi, può essere in configurazione "compresso" o "espanso" -->
         <nav class="std_flex">
-            <button id="nav_menu_btn" type="button" class="fs-2" v-on:click="nav_menu()">
+            <Comp_Menu_Manager 
+            :menu_class = "nav_icon.menu_class"
+            :category = "nav_icon.category"
+            :menu_items = "nav_icon.menu_items"
+            />
+            <!-- <button id="nav_menu_btn" type="button" class="fs-2" v-on:click="nav_menu()">
                 <i id="compressed_menu" class="fa-solid fa-bars"></i>
-            </button>
+            </button> -->
         </nav>
     </header>
 </template>

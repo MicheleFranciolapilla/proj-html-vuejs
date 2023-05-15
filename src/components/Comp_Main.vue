@@ -98,16 +98,40 @@
                                     }
                                 ],
                 heading_menu    :
-                                [
-                                    {
-                                        text    : "LATEST ALBUM",
-                                        active  : true
-                                    },
-                                    {
-                                        text    : "LIVE DATES",
-                                        active  : false
-                                    }
-                                ]
+                                {
+                                    menu_class          : 10,
+                                    is_horizontal       : true,
+                                    // Categorie:
+                                    // 0 = icone
+                                    // 1 = pulsante
+                                    // 2 = testo
+                                    // 3 = special
+                                    category            : 1,
+                                    menu_items          : 
+                                                        [
+                                                            {
+                                                                text        : "LATEST ALBUM",
+                                                                is_active   : true,
+                                                            },
+                                                            {
+                                                                text        : "LIVE DATES",
+                                                                is_active   : false,
+                                                            }
+                                                        ]  
+                                },
+                poster_menu     :
+                                {
+                                    menu_class          : 20,
+                                    is_horizontal       : true,
+                                    category            : 0,
+                                    menu_items          :
+                                                        [
+                                                            {
+                                                                text        : 'fa-solid fa-play',
+                                                                is_active   : true
+                                                            }
+                                                        ]
+                                }
             }
         },
         methods:
@@ -148,7 +172,11 @@
                     <h1>Untold Stories</h1>
                     <h2>There is an untold story behind every favorite song.</h2>
                 </div>
-                <Comp_Menu_Manager source="heading" is_icon="false" :menu="heading_menu" />
+                <Comp_Menu_Manager 
+                 :menu_class = "heading_menu.menu_class"
+                 :category = "heading_menu.category"
+                 :menu_items = "heading_menu.menu_items" 
+                />
             </div>
         </section>
         <Comp_Banner :banner_data = "banner_array[0]" />
@@ -168,6 +196,11 @@
             <p>
                 "I just listened to it and said to myself, "Man, I really love this album." Still, today, it sounds so fresh. It sounds full of ideas. These guys knew what they were doing. They're good. And they're inventive. I haven't heard anything this year that's as inventive. I don't really expect to." 
             </p>
+            <Comp_Menu_Manager 
+             :menu_class = "poster_menu.menu_class"
+             :category = "poster_menu.category"
+             :menu_items = "poster_menu.menu_items"
+            />
         </section>
         <section id="live_date_section">
             <Comp_Banner :banner_data = "banner_array[3]" />
@@ -245,6 +278,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: flex-end;
+            gap: 3rem;
             padding-bottom: 25vh;
             p
             {
