@@ -13,6 +13,9 @@ $card_set_gap               : 2vw;
 $card_set_width             : 85vw;
 $card_set_height            : 97vw;
 
+$footer_height_upper        : 25vh;
+$footer_height_lower        : 15vh;
+
 // Variabili cromatiche
 $header_bg_color            : #262833; 
 $nav_menu_color             : lightgray;
@@ -29,3 +32,6 @@ $img_text_color             : #7D7173;
 $img_overlay_color          : rgba($color: #FF0000, $alpha: 0.5);
 $img_transition_time        : 0.33s;
 
+$footer_upper_bg            : #323844;
+$footer_lower_bg            : #252A33;
+$footer_menu_col            : #767A82;

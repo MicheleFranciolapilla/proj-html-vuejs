@@ -41,6 +41,7 @@
         <nav class="std_flex">
             <Comp_Menu_Manager 
             :menu_class = "nav_icon.menu_class"
+            :is_horizontal="nav_icon.is_horizontal"
             :category = "nav_icon.category"
             :menu_items = "nav_icon.menu_items"
             />

@@ -24,9 +24,9 @@ import { withDirectives } from 'vue';
                     case 20:
                         classes_str = "poster_play";
                         break;                    
-                    // Riquadri su accordion
-                    case 30:
-                        classes_str = "poster_play";
+                    // Menu in footer
+                    case 50:
+                        classes_str = "footer_menu";
                         break;
                 }
                 return classes_str;
@@ -60,8 +60,16 @@ import { withDirectives } from 'vue';
             {{ csi_menu_item.text }}
         </button>
 
-         <a href="#"
-          v-else></a>
+        <a href="#"
+         v-else-if="(csi_category == 2)"
+         :class="(set_if_active())"
+        >
+        {{ csi_menu_item.text }}
+        </a>
+
+        <a href="#"
+          v-else>
+        </a>
 
     </div>
 </template>
@@ -124,6 +132,27 @@ import { withDirectives } from 'vue';
                     text-align: center;
                     line-height: 6rem;
                     border-radius: 50%;
+                } 
+            }
+            a
+            {
+                height: 100px;
+                width: 50px;
+            } 
+            &.footer_menu
+            {
+                a
+                {
+                    color: $footer_menu_col;
+                    background-color: transparent;
+                    &.active 
+                    {
+                        color: white;
+                    }
+                    &:hover 
+                    {
+                        color: white;
+                    }
                 } 
             }
         }

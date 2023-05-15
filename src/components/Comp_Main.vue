@@ -175,6 +175,7 @@
                 <Comp_Menu_Manager 
                  :menu_class = "heading_menu.menu_class"
                  :category = "heading_menu.category"
+                 :is_horizontal="heading_menu.is_horizontal"
                  :menu_items = "heading_menu.menu_items" 
                 />
             </div>
@@ -198,6 +199,7 @@
             </p>
             <Comp_Menu_Manager 
              :menu_class = "poster_menu.menu_class"
+             :is_horizontal="poster_menu.is_horizontal"
              :category = "poster_menu.category"
              :menu_items = "poster_menu.menu_items"
             />
