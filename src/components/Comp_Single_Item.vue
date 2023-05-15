@@ -4,7 +4,13 @@ import { withDirectives } from 'vue';
     export default
     {
         name        : "Comp_Single_Item",
-        props       : ['csi_menu_item', 'csi_category', 'csi_menu_class'],
+        props       : ['csi_menu_item', 'csi_category', 'csi_menu_class', 'social_index'],
+        data()
+        {
+            return {
+                social_array : ["Facebook", "Twitter", "Instagram", "YouTube"]
+            }
+        },
         methods     :
         {
             set_classes()
@@ -27,6 +33,9 @@ import { withDirectives } from 'vue';
                     // Menu in footer
                     case 50:
                         classes_str = "footer_menu";
+                        break;
+                    case 60:
+                        classes_str = "social_menu";
                         break;
                 }
                 return classes_str;
@@ -71,6 +80,10 @@ import { withDirectives } from 'vue';
           v-else>
         </a>
 
+        <span class="hover_on_social">
+            {{ social_array[social_index] }}
+        </span>
+
     </div>
 </template>
 
@@ -80,6 +93,18 @@ import { withDirectives } from 'vue';
 
         .single_item
         {
+            .hover_on_social
+            {
+                display: none;
+                position: absolute;
+                bottom: 100%;
+                left: -50%;
+                transform: translate(-33% -50%);
+                background-color: rgb(32, 30, 30);
+                color: $banner_text_color;
+                padding: 3px 6px;
+                margin-bottom: 5px;
+            }
             button
             {
                 border-radius: 3px;
@@ -97,6 +122,28 @@ import { withDirectives } from 'vue';
                         color: white;
                     }
                 } 
+            }
+            &.social_menu
+            {
+                position: relative;
+                button
+                {
+                    width: 40px;
+                    height: 40px;
+                    color: $banner_text_color;
+                    background-color: $footer_upper_bg;
+                    border: none;
+                    transition: all, 0.5s;
+                    &:hover
+                    {
+                        color: $footer_lower_bg;
+                        background-color: $icon_hover_col;
+                    }
+                } 
+                &:hover .hover_on_social
+                {
+                    display: block;
+                }
             }
             &.heading_btn
             {
@@ -134,11 +181,6 @@ import { withDirectives } from 'vue';
                     border-radius: 50%;
                 } 
             }
-            a
-            {
-                height: 100px;
-                width: 50px;
-            } 
             &.footer_menu
             {
                 a

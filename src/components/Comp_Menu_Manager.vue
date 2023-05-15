@@ -14,6 +14,7 @@
 <template>
     <div class="menu_manager"
      :class="(!(is_horizontal) ? ('flex-column') : (''))"
+     :style="(menu_class == 60) ? ('gap: 0.75rem;') : ('')"
     >
         <Comp_Single_Item  
          v-for="(item, index) in menu_items"
@@ -21,6 +22,7 @@
          :csi_menu_item = "item" 
          :csi_category = "category"
          :csi_menu_class = "menu_class" 
+         :social_index = "index"
          />
     </div>
 </template>

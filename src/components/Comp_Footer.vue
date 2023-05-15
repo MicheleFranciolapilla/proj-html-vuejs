@@ -85,7 +85,20 @@
             />
         </div>
         <div id="footer_lower">
-            <p>&#169; Copyright 2012 - 2023 | <a href="#">Avada Website Builder </a>by <a href="#">TeamFusion</a> | All Right Reserved | Powered by <a href="#">WordPress</a></p>
+            <p>
+                &#169; Copyright 2012 - 2023 | 
+                <a href="#">Avada Website Builder </a>
+                by 
+                <a href="#">TeamFusion</a> 
+                | All Right Reserved | Powered by 
+                <a href="#">WordPress</a>
+            </p>
+            <Comp_Menu_Manager 
+             :menu_class = "social_menu.menu_class"
+             :category = "social_menu.category"
+             :is_horizontal="social_menu.is_horizontal"
+             :menu_items = "social_menu.menu_items" 
+            />
         </div>
     </footer>
 </template>
