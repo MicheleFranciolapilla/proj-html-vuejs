@@ -1,5 +1,6 @@
 <script>
     import { store } from "../store";
+    import Comp_Menu_Manager from "./Comp_Menu_Manager.vue";
     import Comp_Banner from './Comp_Banner.vue';
     import Comp_Single_Card from './Comp_Single_Card.vue';
     export default
@@ -7,6 +8,7 @@
         name        : "Comp_Main",
         components  : 
         {   
+            Comp_Menu_Manager,
             Comp_Banner,
             Comp_Single_Card
         },
@@ -14,7 +16,8 @@
         {
             return {
                 store,
-                banner_array    : [
+                banner_array    : 
+                                [
                                     {
                                         id              : 0, 
                                         bg_color        : "#323844",
@@ -61,7 +64,8 @@
                                         clickable       : true 
                                     }
                                 ],
-                cards_array     : [
+                cards_array     : 
+                                [
                                     {
                                         image   : "img/blog_music_techo-1200x600.jpg", 
                                         title   : "Technology and music",
@@ -91,6 +95,17 @@
                                         image   : "img/blog-post2-600x900.jpg", 
                                         title   : "Sharing the stage with a legend",
                                         text    : " Mauris sit amet massa vitae tortor condimentum lacinia. Phasellus faucibus scelerisque eleifend donec pretium vulputate sapien nec sagittis."     
+                                    }
+                                ],
+                heading_menu    :
+                                [
+                                    {
+                                        text    : "LATEST ALBUM",
+                                        active  : true
+                                    },
+                                    {
+                                        text    : "LIVE DATES",
+                                        active  : false
                                     }
                                 ]
             }
@@ -129,9 +144,11 @@
     <main>
         <section id="heading_section" class="std_flex justify-content-center">
             <div id="heading_title" class="std_flex flex-column">
-                <h1>Untold Stories</h1>
-                <h2>There is an untold story behind every favorite song.</h2>
-                <!-- <Comp_Menu menu = "heading_menu" /> -->
+                <div>
+                    <h1>Untold Stories</h1>
+                    <h2>There is an untold story behind every favorite song.</h2>
+                </div>
+                <Comp_Menu_Manager source="heading" is_icon="false" :menu="heading_menu" />
             </div>
         </section>
         <Comp_Banner :banner_data = "banner_array[0]" />
@@ -171,7 +188,9 @@
             height: calc(100vh - $header_height_basic);
             #heading_title
             {
+                text-align: center;
                 color: white;
+                gap: 2.5rem;
             }
         }
         #card_set_section

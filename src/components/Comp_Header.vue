@@ -1,33 +1,13 @@
 <script>
     import { store } from "../store";
-    import Comp_Menu_Manager from "./Comp_Menu_Manager.vue";
     export default
     {
     name: "Comp_Header",
-    components: Comp_Menu_Manager,
     data() {
         return {
             store,
-            header_menu: 
-            {
-                hamburger: 
-                {
-                    item_unique_id       : 0,
-                    item_switchable      : true,
-                    item_focused         : false,
-                    item_btn_type        : false,
-                    item_expand_btn      : 'fa-solid fa-bars',
-                    item_compress_btn    : 'fa-solid fa-minimize',
-                    item_status          : true,
-                    item_section         : "header",
-                    item_direction       : true
-                },
-                item_list: 
-                    ["Home", "Meet The Band", "Live Dates", "Latest News", "Albums", "Fans"]
-            }
         };
     },
-    components: { Comp_Menu_Manager }
 }
 </script>
 
@@ -40,13 +20,10 @@
             <img src="img/avada-music-logo-retina.png" alt="Logo grande">
         </a>
         <!-- Nella "nav" è allocato il menù, che, nelle varie fasi, può essere in configurazione "compresso" o "espanso" -->
-        <!-- <nav class="std_flex">
+        <nav class="std_flex">
             <button id="nav_menu_btn" type="button" class="fs-2" v-on:click="nav_menu()">
                 <i id="compressed_menu" class="fa-solid fa-bars"></i>
             </button>
-        </nav> -->
-        <nav>
-            <Comp_Menu_Manager :menu = "header_menu.hamburger" :menu_items = "header_menu.item_list" />
         </nav>
     </header>
 </template>
@@ -80,20 +57,16 @@
             } 
             nav
             {
-                min-width: 100px;
-                height: 100%;
+                #nav_menu_btn
+                {
+                    border: none;
+                    background-color: transparent;
+                    color: $nav_menu_color;
+                    &:hover
+                    {
+                        color: $nav_menu_hover_col;
+                    }
+                }
             } 
-            // nav
-            // {
-            //     #nav_menu_btn
-            //     {
-            //         border: none;
-            //         background-color: transparent;
-            //         #compressed_menu
-            //         {
-            //             color: $nav_menu_color;
-            //         }
-            //     }
-            // } 
         }
 </style>

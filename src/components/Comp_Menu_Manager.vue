@@ -7,42 +7,40 @@
         {
             Comp_Single_Item
         },
-        props       : ['menu', 'menu_items'],
+        props       : ['source', 'is_icon', 'menu'],
         data()
         {
             return {
-                        compressed  : true,
-                        expanded    : false,   
-                        horizontal  : true,
-                        vertical    : false,
-                        stringa:"ciao mi chiamo michele" 
             }
         },
         methods     :
         {
-            data_for_props(item_type, item_icon, item_focused)
+            data_for_props(elem)
             {
-                // Caso 0 ---> hamburger
-                let obj_to_send = 
-                {
-                    is_icon     : item_icon, 
-                    btn_label   : this.menu.item_expand_btn,
-                    btn_type    : this.menu.item_btn_type,
-                    focused     : item_focused,
-                    section     : this.menu.item_section  
-                };
-                return obj_to_send;
+                let data_obj = {
+                                    source  : this.source,
+                                    is_icon : this.is_icon,
+                                    item    : elem
+                                };
+                return data_obj;
             }
         }
     }
 </script>
 
 <template>
-    <div class="menu_manager" 
-    :style="(menu.item_direction == vertical) ? ('flex-direction: column') : ('')">
-        <Comp_Single_Item 
-        v-if="((menu.item_switchable) && (menu.item_status = compressed))"
-        :item_features = "data_for_props(0, true, true)" />
+    <div class="menu_manager">
+        <div 
+        v-if="(source == 'heading')"
+        v-for="(item, index) in menu"
+        :key="index">
+            <button type="button"
+            :class="(item.active) ? ('active') : ('')">{{ item.text }}</button>
+        </div>
+        <!-- <Comp_Single_Item 
+        v-for="(elem, index) in this.menu"
+        :key="index"
+        :item_features = "data_for_props(elem)" /> -->
     </div>
 </template>
 
@@ -52,10 +50,25 @@
 
         .menu_manager
         {
-            height: 100%;
+            // height: 100%;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 2rem;
+            button
+            {
+                padding: 1rem 2rem;
+                font-size: 1.5rem;
+                color: white;
+                border: 2px solid white;
+                background-color: transparent;
+                border-radius: 3px;
+                &.active
+                {
+                    border-color: transparent;
+                    background-color: $img_title_color;
+                }
+            } 
         }
 
 </style>
