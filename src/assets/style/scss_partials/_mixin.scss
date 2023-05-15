@@ -2,10 +2,15 @@
 @import "./_variables.scss";
 
 // Funzione mixin di default
-@mixin default_mixin($default_param)
+// @mixin default_mixin($default_param)
+// {
+//     @if $default_param == $default_var
+//     {
+//         display: block;
+//     }
+// }
+
+@mixin btn_style($btn_type, $focused, $section)
 {
-    @if $default_param == $default_var
-    {
-        display: block;
-    }
+
 }

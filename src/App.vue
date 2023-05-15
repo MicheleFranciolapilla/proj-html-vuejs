@@ -21,8 +21,11 @@
     },
     mounted()
     {
-      // Event listener in ascolto su "scroll". Nel caso, setta l'apposita variabile nello store
-      document.addEventListener("scroll", event => { this.store.is_scrolled = (window.scrollY != 0); });
+      // Event listener in ascolto su "scroll". Nel caso, setta le apposite variabili nello store
+      document.addEventListener("scroll", event => 
+      { 
+        this.store.is_scrolled = (window.scrollY != 0); 
+      });
     },
     methods:
     {

@@ -1,5 +1,5 @@
 <script>
-    import Comp_Menu from './Comp_Menu.vue';
+    import { store } from "../store";
     import Comp_Banner from './Comp_Banner.vue';
     import Comp_Single_Card from './Comp_Single_Card.vue';
     export default
@@ -7,13 +7,13 @@
         name        : "Comp_Main",
         components  : 
         {   
-            Comp_Menu,
             Comp_Banner,
             Comp_Single_Card
         },
         data()
         {
             return {
+                store,
                 banner_array    : [
                                     {
                                         id              : 0, 
@@ -131,7 +131,7 @@
             <div id="heading_title" class="std_flex flex-column">
                 <h1>Untold Stories</h1>
                 <h2>There is an untold story behind every favorite song.</h2>
-                <Comp_Menu menu = "heading_menu" />
+                <!-- <Comp_Menu menu = "heading_menu" /> -->
             </div>
         </section>
         <Comp_Banner :banner_data = "banner_array[0]" />
@@ -148,6 +148,9 @@
         </section>
         <Comp_Banner :banner_data = "banner_array[2]" @link_clicked = "manage_click" />
         <section id="poster_section">
+            <p>
+                "I just listened to it and said to myself, "Man, I really love this album." Still, today, it sounds so fresh. It sounds full of ideas. These guys knew what they were doing. They're good. And they're inventive. I haven't heard anything this year that's as inventive. I don't really expect to." 
+            </p>
         </section>
         <section id="live_date_section">
             <Comp_Banner :banner_data = "banner_array[3]" />
@@ -217,9 +220,24 @@
         {
             height: 100vh;
             background-image: url(img/home-testimonial-parallax.jpg);
-            background-attachment: fixed;
-            background-position: center;
+            background-position: center top;
             background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            padding-bottom: 25vh;
+            p
+            {
+                text-align: center;
+                color: white;
+                font-size: 2rem;
+                font-style: italic;
+                line-height: 3rem;
+                font-weight: 600;
+                padding: 0 25vw;
+
+            } 
         }
         #live_date_section
         {
