@@ -27,11 +27,12 @@
                     // Pulsante/icona play
                     case 20:
                         classes_str = "poster_play";
-                        break;                    
+                        break;    
                     // Menu in footer
                     case 50:
                         classes_str = "footer_menu";
                         break;
+                    // Icone dei social media
                     case 60:
                         classes_str = "social_menu";
                         break;
@@ -169,7 +170,7 @@
                 button
                 {
                     color: white;
-                    background-color: $img_title_color;
+                    background-color: transparent;
                     border: none;
                     font-size: 2rem;
                     width: 6rem;
@@ -177,6 +178,14 @@
                     text-align: center;
                     line-height: 6rem;
                     border-radius: 50%;
+                    &.active
+                    {
+                        background-color: $img_title_color;
+                    }
+                    &.hover
+                    {
+                        background-color: $img_title_color;
+                    }
                 } 
             }
             &.footer_menu

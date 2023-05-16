@@ -141,8 +141,8 @@
                                                         [
                                                         {
                                                                 text        : "LED ZEPPELIN",
-                                                                dates       : "02/03/1973 COPENAGHEN, Danimarca",
-                                                                is_active   : false,
+                                                                dates       : "02/03/1973 Copenaghen, DANIMARCA",
+                                                                is_active   : true,
                                                                 map_details : "",
                                                                 img_details : "",
                                                                 sub_title   : "Untold Stories",
@@ -150,7 +150,7 @@
                                                             },
                                                             {
                                                                 text        : "PINK FLOYD",
-                                                                dates       : "15/07/1989 VENEZIA, Italia",
+                                                                dates       : "15/07/1989 Venezia, ITALIA",
                                                                 is_active   : false,
                                                                 map_details : "",
                                                                 img_details : "",
@@ -159,7 +159,7 @@
                                                             },
                                                             {
                                                                 text        : "DEEP PURPLE",
-                                                                dates       : "15/03/2007 ANDRIA, Italia",
+                                                                dates       : "15/03/2007 Andria, ITALIA",
                                                                 is_active   : false,
                                                                 map_details : "",
                                                                 img_details : "",
@@ -168,8 +168,8 @@
                                                             },
                                                             {
                                                                 text        : "IRON MAIDEN",
-                                                                dates       : "19/06/2007 Stadio Olimpico - ROMA, Italia",
-                                                                is_active   : false,
+                                                                dates       : "19/06/2007 Stadio Olimpico - Roma, ITALIA",
+                                                                is_active   : true,
                                                                 map_details : "",
                                                                 img_details : "",
                                                                 sub_title   : "Untold Stories",
@@ -177,7 +177,7 @@
                                                             },
                                                             {
                                                                 text        : "ROLLING STONES",
-                                                                dates       : "04/03/2014 TOKYO DOME - Tokyo, Giappone",
+                                                                dates       : "04/03/2014 Tokyo Dome - Tokyo, GIAPPONE",
                                                                 is_active   : false,
                                                                 map_details : "",
                                                                 img_details : "",
@@ -186,7 +186,7 @@
                                                             },
                                                             {
                                                                 text        : "IRON MAIDEN",
-                                                                dates       : "02/09/2022 ROCK IN RIO - RIO DE JANEIRO, Brasile",
+                                                                dates       : "02/09/2022 ROCK IN RIO - Rio de Janeiro, BRASILE",
                                                                 is_active   : false,
                                                                 map_details : "",
                                                                 img_details : "",
@@ -195,7 +195,7 @@
                                                             },
                                                             {
                                                                 text        : "GUNS'N ROSES",
-                                                                dates       : "01/06/2023 ABU DHABI, Emirati Arabi Uniti",
+                                                                dates       : "01/06/2023 Abu Dhabi, EMIRATI ARABI UNITI",
                                                                 is_active   : false,
                                                                 map_details : "",
                                                                 img_details : "",

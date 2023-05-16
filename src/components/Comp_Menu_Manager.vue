@@ -16,7 +16,7 @@
 <template>
     <div class="menu_manager"
      :class="(!(is_horizontal) ? ('flex-column') : (''))"
-     :style="(menu_class == 60) ? ('gap: 0.75rem;') : ('')"
+     :style="((menu_class == 60) || (menu_class == 30)) ? ('gap: 0.75rem;') : ('')"
     >
         <div          
          v-for="(item, index) in menu_items"
@@ -30,7 +30,7 @@
             />
             <Comp_Special_Item 
              v-else
-             :csi_menu_item = "item"
+             :cs_menu_item = "item"
             />
         </div>
     </div>
