@@ -22,7 +22,7 @@
         :style="(banner_data.bar_color != '') ? (`background-color:${banner_data.bar_color}`) : ('')">
         </div>
         <div class="banner_box std_flex flex-column justify-content-center">
-            <h2 v-if="!(banner_data.clickable)">{{ banner_data.title }}</h2>
+            <h2 v-if="!(banner_data.clickable)" class="extra_font" style="font-size: 70px;">{{ banner_data.title }}</h2>
             <span v-else>{{ banner_data.title }}</span>
             <div v-if="banner_data.line_bool" class="line"></div>
             <div>

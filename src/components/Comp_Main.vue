@@ -252,7 +252,7 @@
         <section id="heading_section" class="std_flex justify-content-center">
             <div id="heading_title" class="std_flex flex-column">
                 <div>
-                    <h1>Untold Stories</h1>
+                    <h1 class="extra_font" style="font-size: 160px;">Untold Stories</h1>
                     <h2>There is an untold story behind every favorite song.</h2>
                 </div>
                 <Comp_Menu_Manager 

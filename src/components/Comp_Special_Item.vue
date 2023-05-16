@@ -32,7 +32,7 @@
             <div class="button_side">
                 <button type="button">{{ (cs_menu_item.is_active) ? ('-') : ('+')}}</button>
             </div>
-            <div class="text_side std_flex">
+            <div class="text_side std_flex extra_font">
                 <h5>{{ cs_menu_item.dates }}</h5>
                 <h4>{{ cs_menu_item.text }}</h4>
             </div>

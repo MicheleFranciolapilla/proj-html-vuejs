@@ -3,11 +3,10 @@
 @import "./scss_partials/_mixin.scss";
 @import "../../../node_modules/bootstrap/scss/bootstrap.scss";
 
-// * :i
-// {
-//     font-family: 'Tilt Warp', cursive;
-//     font-family: 'Work Sans', sans-serif;
-// }
+.extra_font
+{
+  font-family: 'Roboto', sans-serif;
+}
 
 /* width */
 ::-webkit-scrollbar {
