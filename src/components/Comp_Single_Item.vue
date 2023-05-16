@@ -27,7 +27,11 @@
                     // Pulsante/icona play
                     case 20:
                         classes_str = "poster_play";
-                        break;    
+                        break;   
+                    // Pulsante di prenotazione 
+                    case 40:
+                        classes_str = "book_now";
+                        break;
                     // Menu in footer
                     case 50:
                         classes_str = "footer_menu";
@@ -165,6 +169,29 @@
                     }
                 } 
             }
+            &.book_now
+            {
+                button
+                {
+                    color: white;
+                    background-color: transparent;
+                    border: 1px solid white;
+                    border-radius: 0;
+                    font-size: 1rem;
+                    padding: 1rem 1.5rem;
+                    &.active
+                    {
+                        background-color: $img_title_color;
+                        border-color: $img_title_color;
+                        transition: all, 0.25s;
+                    }
+                    &:hover
+                    {
+                        color: black;
+                        background-color: white;
+                    }
+                } 
+            }
             &.poster_play
             {
                 button
@@ -205,5 +232,4 @@
                 } 
             }
         }
-
 </style>

@@ -41,12 +41,17 @@
          :class="(cs_menu_item.is_active) ? ('open') : ('')"
         >
             <div class="inner_box std_flex">
-                <img src="https://theblondeabroad.com/wp-content/uploads/2016/10/tokyo-map-712x712.jpg" alt="Mappa">
+                <img :src="cs_menu_item.map_details" alt="Mappa città">
                 <div class="info_box">
                     <h4>{{ cs_menu_item.sub_title }}</h4>
                     <p>{{ cs_menu_item.paragraph }}</p>
+                    <Comp_Single_Item
+                    :csi_menu_item = "{ 'text' : 'BOOK NOW', 'is_active' : true }" 
+                    :csi_category = "1"
+                    :csi_menu_class = "40" 
+                    />
                 </div>
-                <img :src="cs_menu_item.img_details" alt="Mappa">
+                <img :src="cs_menu_item.img_details" alt="Foto concerto">
             </div>
         </div>
     </div>
@@ -117,18 +122,21 @@
                 .info_box
                 {
                     width: 40%;
-                    height: 100%;
+                    height: calc(100%);
                     padding: 0 2rem;
                     padding-top: 0.2rem;
                     h4
                     {
                         text-align: center;
                         color: white;
+                        height: 20%;
                     } 
                     p
                     {
                         font-size: large;
                         color: $banner_text_color;
+                        height: calc(50%);
+                        overflow-y: auto;
                     } 
                 }
             }
