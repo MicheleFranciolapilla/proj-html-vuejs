@@ -1,6 +1,4 @@
 <script>
-import { withDirectives } from 'vue';
-
     export default
     {
         name        : "Comp_Single_Item",

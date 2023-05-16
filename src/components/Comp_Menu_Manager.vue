@@ -1,11 +1,13 @@
 <script>
     import Comp_Single_Item from "./Comp_Single_Item.vue";
+    import Comp_Special_Item from "./Comp_Special_Item.vue";
     export default
     {
         name        : "Comp_Menu_Manager",
         components  : 
         {
-            Comp_Single_Item
+            Comp_Single_Item,
+            Comp_Special_Item
         },
         props       : ['menu_class', 'is_horizontal', 'category', 'menu_items'],
     }
@@ -16,14 +18,21 @@
      :class="(!(is_horizontal) ? ('flex-column') : (''))"
      :style="(menu_class == 60) ? ('gap: 0.75rem;') : ('')"
     >
-        <Comp_Single_Item  
+        <div          
          v-for="(item, index) in menu_items"
-         :key="index + menu_class"
-         :csi_menu_item = "item" 
-         :csi_category = "category"
-         :csi_menu_class = "menu_class" 
-         :social_index = "index"
-         />
+         :key="index + menu_class">
+            <Comp_Single_Item
+             v-if="(menu_class != 30)"  
+             :csi_menu_item = "item" 
+             :csi_category = "category"
+             :csi_menu_class = "menu_class" 
+             :social_index = "index"
+            />
+            <Comp_Special_Item 
+             v-else
+             :csi_menu_item = "item"
+            />
+        </div>
     </div>
 </template>
 

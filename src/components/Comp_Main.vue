@@ -131,6 +131,78 @@
                                                                 is_active   : true
                                                             }
                                                         ]
+                                },
+                live_dates_menu :
+                                {
+                                    menu_class          : 30,
+                                    is_horizontal       : false,
+                                    category            : 1,
+                                    menu_items          :
+                                                        [
+                                                        {
+                                                                text        : "LED ZEPPELIN",
+                                                                dates       : "02/03/1973 COPENAGHEN, Danimarca",
+                                                                is_active   : false,
+                                                                map_details : "",
+                                                                img_details : "",
+                                                                sub_title   : "Untold Stories",
+                                                                paragraph   : "Posuere urna nec tincidunt praesent semper. Amet consectetur adipiscing elit duis. Turpis cursus in hac habitasse platea. Habitasse platea dictumst quisque sagittis purus sit amet. Nibh praesent tristique magna sit. Duis ultricies lacus sed turpis tincidunt id aliquet." 
+                                                            },
+                                                            {
+                                                                text        : "PINK FLOYD",
+                                                                dates       : "15/07/1989 VENEZIA, Italia",
+                                                                is_active   : false,
+                                                                map_details : "",
+                                                                img_details : "",
+                                                                sub_title   : "Untold Stories",
+                                                                paragraph   : "Ut porttitor leo a diam sollicitudin tempor. Aenean sed adipiscing diam donec adipiscing tristique. Quis lectus nulla at volutpat. Vitae nunc sed velit dignissim. Augue neque gravida in fermentum et. In nibh mauris cursus mattis molestie a iaculis at. Bibendum ut tristique et egestas. Nec feugiat nisl pretium fusce." 
+                                                            },
+                                                            {
+                                                                text        : "DEEP PURPLE",
+                                                                dates       : "15/03/2007 ANDRIA, Italia",
+                                                                is_active   : false,
+                                                                map_details : "",
+                                                                img_details : "",
+                                                                sub_title   : "Untold Stories",
+                                                                paragraph   : "Maecenas volutpat blandit aliquam etiam erat velit. Mattis pellentesque id nibh tortor id aliquet lectus. Egestas congue quisque egestas diam in. Iaculis at erat pellentesque adipiscing commodo elit at imperdiet dui. Posuere urna nec tincidunt praesent semper. Amet consectetur adipiscing elit duis. Turpis cursus in hac habitasse platea. Habitasse platea dictumst quisque sagittis purus sit amet. Nibh praesent tristique magna sit. Duis ultricies lacus sed turpis tincidunt id aliquet. Auctor urna nunc id cursus. Senectus et netus et malesuada fames ac turpis. Ipsum consequat nisl vel pretium lectus quam id leo in. Feugiat scelerisque varius morbi enim." 
+                                                            },
+                                                            {
+                                                                text        : "IRON MAIDEN",
+                                                                dates       : "19/06/2007 Stadio Olimpico - ROMA, Italia",
+                                                                is_active   : false,
+                                                                map_details : "",
+                                                                img_details : "",
+                                                                sub_title   : "Untold Stories",
+                                                                paragraph   : "Iaculis urna id volutpat lacus laoreet non curabitur. Sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus. Posuere sollicitudin aliquam ultrices sagittis orci a. Pellentesque dignissim enim sit amet venenatis urna cursus eget. Posuere urna nec tincidunt praesent semper feugiat nibh. Justo donec enim diam vulputate. Lobortis scelerisque fermentum dui faucibus in ornare quam. Augue eget arcu dictum varius. Vulputate ut pharetra sit amet." 
+                                                            },
+                                                            {
+                                                                text        : "ROLLING STONES",
+                                                                dates       : "04/03/2014 TOKYO DOME - Tokyo, Giappone",
+                                                                is_active   : false,
+                                                                map_details : "",
+                                                                img_details : "",
+                                                                sub_title   : "Untold Stories",
+                                                                paragraph   : "Arcu non sodales neque sodales ut etiam. Mauris sit amet massa vitae tortor condimentum lacinia. Consequat id porta nibh venenatis cras sed. Turpis nunc eget lorem dolor sed. Interdum consectetur libero id faucibus nisl. Sit amet nulla facilisi morbi tempus iaculis urna id. Risus pretium quam vulputate dignissim. Sit amet facilisis magna etiam tempor orci eu lobortis elementum." 
+                                                            },
+                                                            {
+                                                                text        : "IRON MAIDEN",
+                                                                dates       : "02/09/2022 ROCK IN RIO - RIO DE JANEIRO, Brasile",
+                                                                is_active   : false,
+                                                                map_details : "",
+                                                                img_details : "",
+                                                                sub_title   : "Untold Stories",
+                                                                paragraph   : "Dictum sit amet justo donec. Odio eu feugiat pretium nibh ipsum consequat nisl. Aenean sed adipiscing diam donec adipiscing. Nibh tortor id aliquet lectus proin nibh nisl condimentum. Nunc aliquet bibendum enim facilisis gravida neque convallis a. Vulputate enim nulla aliquet porttitor lacus luctus accumsan tortor posuere. Lacus sed turpis tincidunt id aliquet risus feugiat. Pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at. Amet consectetur adipiscing elit ut aliquam purus. Urna et pharetra pharetra massa massa ultricies. Eget velit aliquet sagittis id consectetur purus ut faucibus. Id diam vel quam elementum. Vestibulum morbi blandit cursus risus at ultrices mi tempus." 
+                                                            },
+                                                            {
+                                                                text        : "GUNS'N ROSES",
+                                                                dates       : "01/06/2023 ABU DHABI, Emirati Arabi Uniti",
+                                                                is_active   : false,
+                                                                map_details : "",
+                                                                img_details : "",
+                                                                sub_title   : "Untold Stories",
+                                                                paragraph   : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." 
+                                                            }
+                                                        ]
                                 }
             }
         },
@@ -204,8 +276,16 @@
              :menu_items = "poster_menu.menu_items"
             />
         </section>
-        <section id="live_date_section">
+        <section id="live_dates_section">
             <Comp_Banner :banner_data = "banner_array[3]" />
+            <div id="live_dates_tab">
+                <Comp_Menu_Manager 
+                 :menu_class = "live_dates_menu.menu_class"
+                 :is_horizontal="live_dates_menu.is_horizontal"
+                 :category = "live_dates_menu.category"
+                 :menu_items = "live_dates_menu.menu_items"
+                />
+            </div>
         </section>
         <Comp_Banner :banner_data = "banner_array[4]" @link_clicked = "manage_click" />
     </main>
@@ -235,7 +315,7 @@
             #card_set
             {
                 width: $card_set_width;
-                height: $card_set_height;
+                min-height: $card_set_height;
                 display: grid;
                 gap: $card_set_gap;
                 grid-template-areas: 
@@ -294,9 +374,10 @@
 
             } 
         }
-        #live_date_section
+        #live_dates_section
         {
             background-color: $main_bg_color;
+            padding: 0 $card_set_padding calc(2 * $card_set_padding);
         }
     }
 
