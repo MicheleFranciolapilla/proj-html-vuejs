@@ -10,6 +10,13 @@
             Comp_Special_Item
         },
         props       : ['menu_class', 'is_horizontal', 'category', 'menu_items'],
+        methods     :
+        {
+            rebound_click(index_to_rebound)
+            {
+                this.$emit("rebounded",index_to_rebound);
+            }
+        }
     }
 </script>
 
@@ -31,6 +38,8 @@
             <Comp_Special_Item 
              v-else
              :cs_menu_item = "item"
+             :cs_index = "index"
+             @click_on_special = "rebound_click"
             />
         </div>
     </div>

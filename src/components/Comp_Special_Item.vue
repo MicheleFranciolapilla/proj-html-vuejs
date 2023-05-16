@@ -7,7 +7,7 @@
         {
             Comp_Single_Item
         },
-        props       : ['cs_menu_item'],
+        props       : ['cs_menu_item', 'cs_index'],
         data()
         {
             return {
@@ -15,6 +15,10 @@
         },
         methods     :
         {
+            click_on_special_item()
+            {
+                this.$emit("click_on_special", this.cs_index);
+            }
         }
     }
 </script>
@@ -22,16 +26,21 @@
 <template>
     <div class="special_item"
      :class="(cs_menu_item.is_active) ? ('active') : ('')"
+     v-on:click.prevent="click_on_special_item()"
     >
-        <a href="#" class="special_button std_flex">
+        <a href="" class="special_button std_flex">
             <div class="button_side">
                 <button type="button">{{ (cs_menu_item.is_active) ? ('-') : ('+')}}</button>
             </div>
             <div class="text_side std_flex">
                 <h4>{{ cs_menu_item.text }}</h4>
+                <span>{{ cs_index }}</span>
                 <h5>{{ cs_menu_item.dates }}</h5>
             </div>
         </a>
+        <div class="map_box">
+
+        </div>
     </div>
 </template>
 

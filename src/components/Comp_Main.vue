@@ -142,7 +142,7 @@
                                                         {
                                                                 text        : "LED ZEPPELIN",
                                                                 dates       : "02/03/1973 Copenaghen, DANIMARCA",
-                                                                is_active   : true,
+                                                                is_active   : false,
                                                                 map_details : "",
                                                                 img_details : "",
                                                                 sub_title   : "Untold Stories",
@@ -169,7 +169,7 @@
                                                             {
                                                                 text        : "IRON MAIDEN",
                                                                 dates       : "19/06/2007 Stadio Olimpico - Roma, ITALIA",
-                                                                is_active   : true,
+                                                                is_active   : false,
                                                                 map_details : "",
                                                                 img_details : "",
                                                                 sub_title   : "Untold Stories",
@@ -231,6 +231,17 @@
             {
                 console.log("E' stato cliccato il link....",link_id);
                 console.log("Il titolo dell'elemento cliccato è: ", this.banner_array[link_id].title);
+            },
+
+            click_from_special(special_index)
+            {
+                if (this.live_dates_menu.menu_items[special_index].is_active)
+                    this.live_dates_menu.menu_items[special_index].is_active = false;
+                else
+                {
+                    this.live_dates_menu.menu_items.forEach( (item) => item.is_active = false);
+                    this.live_dates_menu.menu_items[special_index].is_active = true;
+                }
             }
         }
     }
@@ -284,6 +295,7 @@
                  :is_horizontal="live_dates_menu.is_horizontal"
                  :category = "live_dates_menu.category"
                  :menu_items = "live_dates_menu.menu_items"
+                 @rebounded = "click_from_special"
                 />
             </div>
         </section>
