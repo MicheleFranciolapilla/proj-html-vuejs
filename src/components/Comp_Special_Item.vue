@@ -33,13 +33,21 @@
                 <button type="button">{{ (cs_menu_item.is_active) ? ('-') : ('+')}}</button>
             </div>
             <div class="text_side std_flex">
-                <h4>{{ cs_menu_item.text }}</h4>
-                <span>{{ cs_index }}</span>
                 <h5>{{ cs_menu_item.dates }}</h5>
+                <h4>{{ cs_menu_item.text }}</h4>
             </div>
         </a>
-        <div class="map_box">
-
+        <div class="map_box"
+         :class="(cs_menu_item.is_active) ? ('open') : ('')"
+        >
+            <div class="inner_box std_flex">
+                <img src="https://theblondeabroad.com/wp-content/uploads/2016/10/tokyo-map-712x712.jpg" alt="Mappa">
+                <div class="info_box">
+                    <h4>{{ cs_menu_item.sub_title }}</h4>
+                    <p>{{ cs_menu_item.paragraph }}</p>
+                </div>
+                <img :src="cs_menu_item.img_details" alt="Mappa">
+            </div>
         </div>
     </div>
 </template>
@@ -54,6 +62,7 @@
         display: flex;
         flex-direction: column;
         align-items: start;
+
         background-color: $footer_upper_bg;
         .special_button
         {
@@ -85,6 +94,45 @@
                 padding: 0 2rem;
             }
         }
+        .map_box
+        {
+            width: 100%;
+            height: 0; 
+            overflow: hidden;
+            transition: height, $accordion_trans_time;
+            .inner_box
+            {
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                padding: 0 $map_box_padding;
+                margin: 0 auto;
+                img
+                {
+                    width: 30%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center bottom;
+                }
+                .info_box
+                {
+                    width: 40%;
+                    height: 100%;
+                    padding: 0 2rem;
+                    padding-top: 0.2rem;
+                    h4
+                    {
+                        text-align: center;
+                        color: white;
+                    } 
+                    p
+                    {
+                        font-size: large;
+                        color: $banner_text_color;
+                    } 
+                }
+            }
+        }
         &:hover
         {
             cursor: pointer;
@@ -102,6 +150,8 @@
         }
         &.active
         {
+            gap: 1.5rem;
+            padding-bottom: 1.5rem;
             .special_button
             {
                 .button_side
@@ -111,6 +161,10 @@
                         background-color: $img_title_color;
                     } 
                 }
+            }
+            .open
+            {
+                height: $map_box_height;
             }
         } 
     }

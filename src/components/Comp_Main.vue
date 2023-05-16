@@ -139,13 +139,13 @@
                                     category            : 1,
                                     menu_items          :
                                                         [
-                                                        {
+                                                            {
                                                                 text        : "LED ZEPPELIN",
                                                                 dates       : "02/03/1973 Copenaghen, DANIMARCA",
                                                                 is_active   : false,
                                                                 map_details : "",
-                                                                img_details : "",
-                                                                sub_title   : "Untold Stories",
+                                                                img_details : "rock_img/led_zeppelin.webp",
+                                                                sub_title   : "I mitici Led Zeppelin",
                                                                 paragraph   : "Posuere urna nec tincidunt praesent semper. Amet consectetur adipiscing elit duis. Turpis cursus in hac habitasse platea. Habitasse platea dictumst quisque sagittis purus sit amet. Nibh praesent tristique magna sit. Duis ultricies lacus sed turpis tincidunt id aliquet." 
                                                             },
                                                             {
@@ -153,8 +153,8 @@
                                                                 dates       : "15/07/1989 Venezia, ITALIA",
                                                                 is_active   : false,
                                                                 map_details : "",
-                                                                img_details : "",
-                                                                sub_title   : "Untold Stories",
+                                                                img_details : "rock_img/pink_floyd.webp",
+                                                                sub_title   : "Quando musica si scrive MUSICA!!!",
                                                                 paragraph   : "Ut porttitor leo a diam sollicitudin tempor. Aenean sed adipiscing diam donec adipiscing tristique. Quis lectus nulla at volutpat. Vitae nunc sed velit dignissim. Augue neque gravida in fermentum et. In nibh mauris cursus mattis molestie a iaculis at. Bibendum ut tristique et egestas. Nec feugiat nisl pretium fusce." 
                                                             },
                                                             {
@@ -162,8 +162,8 @@
                                                                 dates       : "15/03/2007 Andria, ITALIA",
                                                                 is_active   : false,
                                                                 map_details : "",
-                                                                img_details : "",
-                                                                sub_title   : "Untold Stories",
+                                                                img_details : "rock_img/deep_purple.webp",
+                                                                sub_title   : "Dall'olimpo",
                                                                 paragraph   : "Maecenas volutpat blandit aliquam etiam erat velit. Mattis pellentesque id nibh tortor id aliquet lectus. Egestas congue quisque egestas diam in. Iaculis at erat pellentesque adipiscing commodo elit at imperdiet dui. Posuere urna nec tincidunt praesent semper. Amet consectetur adipiscing elit duis. Turpis cursus in hac habitasse platea. Habitasse platea dictumst quisque sagittis purus sit amet. Nibh praesent tristique magna sit. Duis ultricies lacus sed turpis tincidunt id aliquet. Auctor urna nunc id cursus. Senectus et netus et malesuada fames ac turpis. Ipsum consequat nisl vel pretium lectus quam id leo in. Feugiat scelerisque varius morbi enim." 
                                                             },
                                                             {
@@ -171,8 +171,8 @@
                                                                 dates       : "19/06/2007 Stadio Olimpico - Roma, ITALIA",
                                                                 is_active   : false,
                                                                 map_details : "",
-                                                                img_details : "",
-                                                                sub_title   : "Untold Stories",
+                                                                img_details : "rock_img/iron_maiden_1.webp",
+                                                                sub_title   : "Eddie sbarca a Roma",
                                                                 paragraph   : "Iaculis urna id volutpat lacus laoreet non curabitur. Sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus. Posuere sollicitudin aliquam ultrices sagittis orci a. Pellentesque dignissim enim sit amet venenatis urna cursus eget. Posuere urna nec tincidunt praesent semper feugiat nibh. Justo donec enim diam vulputate. Lobortis scelerisque fermentum dui faucibus in ornare quam. Augue eget arcu dictum varius. Vulputate ut pharetra sit amet." 
                                                             },
                                                             {
@@ -180,8 +180,8 @@
                                                                 dates       : "04/03/2014 Tokyo Dome - Tokyo, GIAPPONE",
                                                                 is_active   : false,
                                                                 map_details : "",
-                                                                img_details : "",
-                                                                sub_title   : "Untold Stories",
+                                                                img_details : "rock_img/rolling_stones.webp",
+                                                                sub_title   : "70 anni e non sentirli...",
                                                                 paragraph   : "Arcu non sodales neque sodales ut etiam. Mauris sit amet massa vitae tortor condimentum lacinia. Consequat id porta nibh venenatis cras sed. Turpis nunc eget lorem dolor sed. Interdum consectetur libero id faucibus nisl. Sit amet nulla facilisi morbi tempus iaculis urna id. Risus pretium quam vulputate dignissim. Sit amet facilisis magna etiam tempor orci eu lobortis elementum." 
                                                             },
                                                             {
@@ -189,8 +189,8 @@
                                                                 dates       : "02/09/2022 ROCK IN RIO - Rio de Janeiro, BRASILE",
                                                                 is_active   : false,
                                                                 map_details : "",
-                                                                img_details : "",
-                                                                sub_title   : "Untold Stories",
+                                                                img_details : "rock_img/iron_maiden_2.webp",
+                                                                sub_title   : "Up the Irons",
                                                                 paragraph   : "Dictum sit amet justo donec. Odio eu feugiat pretium nibh ipsum consequat nisl. Aenean sed adipiscing diam donec adipiscing. Nibh tortor id aliquet lectus proin nibh nisl condimentum. Nunc aliquet bibendum enim facilisis gravida neque convallis a. Vulputate enim nulla aliquet porttitor lacus luctus accumsan tortor posuere. Lacus sed turpis tincidunt id aliquet risus feugiat. Pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at. Amet consectetur adipiscing elit ut aliquam purus. Urna et pharetra pharetra massa massa ultricies. Eget velit aliquet sagittis id consectetur purus ut faucibus. Id diam vel quam elementum. Vestibulum morbi blandit cursus risus at ultrices mi tempus." 
                                                             },
                                                             {
@@ -198,8 +198,8 @@
                                                                 dates       : "01/06/2023 Abu Dhabi, EMIRATI ARABI UNITI",
                                                                 is_active   : false,
                                                                 map_details : "",
-                                                                img_details : "",
-                                                                sub_title   : "Untold Stories",
+                                                                img_details : "rock_img/guns_roses.webp",
+                                                                sub_title   : "Slash & co",
                                                                 paragraph   : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." 
                                                             }
                                                         ]
