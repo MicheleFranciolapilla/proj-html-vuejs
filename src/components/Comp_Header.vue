@@ -45,9 +45,6 @@
             :category = "nav_icon.category"
             :menu_items = "nav_icon.menu_items"
             />
-            <!-- <button id="nav_menu_btn" type="button" class="fs-2" v-on:click="nav_menu()">
-                <i id="compressed_menu" class="fa-solid fa-bars"></i>
-            </button> -->
         </nav>
     </header>
 </template>
